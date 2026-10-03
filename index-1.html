@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rayiv Cutinha — Full-stack Developer</title>
+<meta name="description" content="Desarrollador Full-Stack bilingüe (español/inglés) con MERN. Portfolio de proyectos.">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0b0b;--card:#121212;--line:#262626;--txt:#f1f1f1;--mut:#8d8d8d;--mono:'Fira Mono',ui-monospace,Menlo,Consolas,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:980px;margin:0 auto;padding:0 5%}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;font-size:.82rem}
+nav .name{line-height:1.2;color:var(--txt)}
+nav .links{display:flex;gap:22px;color:var(--mut)}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:99px;padding:7px 16px;font-size:.8rem;color:var(--txt);transition:.2s}
+.pill:hover{background:var(--txt);color:#0b0b0b}
+.pill.w{background:var(--txt);color:#0b0b0b;font-weight:500;padding:11px 22px}
+.hero{padding:70px 0 40px}
+.hero h1{font-family:var(--mono);font-weight:500;font-size:clamp(2.4rem,11vw,5.4rem);line-height:1.05;letter-spacing:-.02em}
+.hero h1 span{display:block;text-align:right}
+.hero .row{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-top:26px}
+.hero p{color:var(--mut);max-width:340px;font-size:.92rem}
+.hero p em{color:var(--txt)}
+.socials{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+.label{font-family:var(--mono);color:var(--mut);font-size:.8rem;margin-bottom:26px}
+section{padding:70px 0}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(270px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;min-height:210px}
+.card h3{font-family:var(--mono);font-weight:500;font-size:1.02rem;line-height:1.35}
+.card p{color:var(--mut);font-size:.86rem;margin-top:8px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.tags span{font-family:var(--mono);font-size:.7rem;color:var(--mut);border:1px solid var(--line);border-radius:99px;padding:2px 10px}
+.foot{margin-top:auto;padding-top:18px;display:flex;justify-content:flex-end}
+.go,.lock{width:38px;height:38px;border-radius:50%;display:grid;place-items:center}
+.go{background:var(--txt);color:#0b0b0b;transition:.2s}
+.go:hover{transform:scale(1.08)}
+.lock{background:#0b0b0b;border:1px solid var(--line);color:#4a4a4a}
+.skills{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.sk{border:1px solid var(--line);border-radius:18px;padding:18px 20px}
+.sk.hi{background:var(--txt);color:#0b0b0b;border-color:var(--txt)}
+.sk b{font-weight:400;font-size:.95rem}
+.sk p{font-family:var(--mono);font-size:.74rem;margin-top:8px;color:var(--mut);line-height:1.8}
+.sk.hi p{color:#333}
+.about{display:grid;gap:30px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-bottom:34px;align-items:start}
+.about p{color:var(--mut);max-width:420px}
+.about p em{color:var(--txt)}
+.work{border-top:1px solid var(--line)}
+.work .r{display:grid;grid-template-columns:1.1fr 1.3fr 1.6fr;gap:12px;padding:18px 10px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:.8rem;transition:.2s}
+.work .r:hover{background:var(--txt);color:#0b0b0b}
+.work .r small{display:block;color:var(--mut);font-size:.7rem}
+.work .r:hover small{color:#555}
+@media(max-width:560px){.work .r{grid-template-columns:1fr;gap:2px}nav .links{display:none}.hero h1 span{text-align:left}}
+.cert{margin-top:22px;color:var(--mut);font-size:.85rem}
+.big{font-family:var(--mono);font-weight:500;font-size:clamp(2rem,8vw,3.6rem);text-align:right;margin-bottom:26px}
+footer{border-top:1px solid var(--line);padding:30px 0 50px;color:var(--mut);font-size:.78rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+</svg>
+
+<div class="wrap">
+  <nav>
+    <a class="name" href="#">Rayiv<br>Cutinha</a>
+    <div class="links"><a href="#proyectos">Proyectos</a><a href="#skills">Skills</a><a href="#experiencia">Experiencia</a><a href="#contacto">Contacto</a></div>
+    <a class="pill" href="cv-rayiv.pdf" download>CV ↓</a>
+  </nav>
+
+  <header class="hero">
+    <h1>Full-stack<span>Developer</span></h1>
+    <div class="row">
+      <p>Construyo aplicaciones web con <em>MERN</em>, de la base de datos al deploy, pensando siempre en quien las usa. Bilingüe <em>español / inglés</em>.</p>
+      <a class="pill w" href="#proyectos">Proyectos <svg width="16" height="16"><use href="#i-right"/></svg></a>
+    </div>
+    <div class="socials">
+      <a class="pill" href="https://linkedin.com/in/langdevrc" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="pill" href="mailto:lang.devrc@gmail.com">Email</a>
+    </div>
+  </header>
+
+  <section id="proyectos">
+    <p class="label">.../Proyectos ...</p>
+    <div class="grid">
+      <article class="card">
+        <h3>Armana — E-commerce MERN</h3>
+        <p>Tienda online full-stack con catálogo, carrito y gestión de pedidos.</p>
+        <div class="tags"><span>React</span><span>Node</span><span>MongoDB</span><span>Vercel</span></div>
+        <div class="foot"><a class="go" href="https://armana-web-sable.vercel.app" target="_blank" rel="noopener" aria-label="Ver demo de Armana"><svg width="18" height="18"><use href="#i-arrow"/></svg></a></div>
+      </article>
+      <article class="card">
+        <h3>InsightBoard — Dashboard SaaS</h3>
+        <p>Panel de analítica con gráficos Recharts y exportación a PDF/Excel.</p>
+        <div class="tags"><span>MERN</span><span>Recharts</span><span>Atlas</span></div>
+        <div class="foot"><span class="lock" role="img" aria-label="Privado"><svg width="17" height="17"><use href="#i-lock"/></svg></span></div>
+      </article>
+      <article class="card">
+        <h3>SupportDesk — Tickets</h3>
+        <p>Sistema de tickets de soporte con autenticación JWT y paneles por rol.</p>
+        <div class="tags"><span>React</span><span>Node</span><span>JWT</span><span>MongoDB</span></div>
+        <div class="foot"><span class="lock" role="img" aria-label="Privado"><svg width="17" height="17"><use href="#i-lock"/></svg></span></div>
+      </article>
+      <article class="card">
+        <h3>Mental Health Support Network</h3>
+        <p>Grupos de apoyo y terapeutas por videochat seguro, con seguimiento de ánimo y foros anónimos.</p>
+        <div class="tags"><span>React</span><span>Node/Express</span><span>MongoDB</span><span>WebSockets</span><span>Twilio</span></div>
+        <div class="foot"><span class="lock" role="img" aria-label="Privado"><svg width="17" height="17"><use href="#i-lock"/></svg></span></div>
+      </article>
+      <article class="card">
+        <h3>Eco-Habit Tracker</h3>
+        <p>Registro de hábitos con calculadora de huella de carbono.</p>
+        <div class="tags"><span>Vue</span><span>Django</span><span>PostgreSQL</span><span>Chart.js</span><span>AWS S3</span></div>
+        <div class="foot"><span class="lock" role="img" aria-label="Privado"><svg width="17" height="17"><use href="#i-lock"/></svg></span></div>
+      </article>
+      <article class="card">
+        <h3>Volunteer Matching Marketplace</h3>
+        <p>Conecta voluntarios con ONGs según habilidades, ubicación y disponibilidad.</p>
+        <div class="tags"><span>Angular</span><span>Spring Boot</span><span>MySQL</span><span>Google Maps</span></div>
+        <div class="foot"><span class="lock" role="img" aria-label="Privado"><svg width="17" height="17"><use href="#i-lock"/></svg></span></div>
+      </article>
+      <article class="card">
+        <h3>Job Board inclusivo</h3>
+        <p>Portal de empleo con filtros de accesibilidad y análisis de CV con IA.</p>
+        <div class="tags"><span>React</span><span>Django</span><span>PostgreSQL</span><span>OpenAI API</span></div>
+        <div class="foot"><span class="lock" role="img" aria-label="Privado"><svg width="17" height="17"><use href="#i-lock"/></svg></span></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <p class="label">.../Sobre mí ...</p>
+    <div class="about">
+      <p>Hola, soy Rayiv, <em>desarrollador full-stack</em> certificado en MERN. Vengo de ventas, atención al cliente y de crear mi propio negocio, y eso se nota en cómo diseño productos.</p>
+      <p>Idiomas: <em>español</em> nativo, <em>inglés</em> profesional. Disponible en <em>Chile</em> o remoto.</p>
+    </div>
+    <div class="skills">
+      <div class="sk hi"><b>Front-end</b><p>JavaScript / React / HTML / CSS / Recharts</p></div>
+      <div class="sk"><b>Back-end</b><p>Node.js / Express / JWT / Python / Java</p></div>
+      <div class="sk"><b>Bases de datos</b><p>MongoDB / MongoDB Atlas / SQL</p></div>
+      <div class="sk"><b>Herramientas</b><p>Git / GitHub / Vercel / Postman</p></div>
+    </div>
+  </section>
+
+  <section id="experiencia">
+    <p class="big">Work</p>
+    <div class="work">
+      <div class="r"><div>2026 – Presente</div><div>AppOpen Technologies</div><div>Full-stack developer | Bangalore, India</div></div>
+      <div class="r"><div>2025 – 2026</div><div>Enerzcloud Innovations</div><div>Internship MERN stack | Bangalore, India</div></div>
+      <div class="r"><div>2023 – 2024</div><div>IssueFit.com</div><div>Fundador | Santiago, Chile</div></div>
+    </div>
+    <p class="cert">Certificaciones ProStack Academy (2025): MERN Full-Stack Development · Full-Stack Development (Web, Java, Python)</p>
+  </section>
+
+  <section id="contacto" style="padding-top:20px">
+    <p class="label">.../Contacto ...</p>
+    <div class="socials" style="margin-top:0">
+      <a class="pill w" href="mailto:lang.devrc@gmail.com">lang.devrc@gmail.com</a>
+      <a class="pill" href="https://linkedin.com/in/langdevrc" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer><span>© <span id="y"></span> Rayiv Cutinha</span><span>Full-stack Developer</span></footer>
+</div>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
